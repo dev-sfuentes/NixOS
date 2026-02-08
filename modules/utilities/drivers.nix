@@ -22,11 +22,6 @@
 
       enable32Bit = true; # Support for 32 bits applications
     }
-    // lib.optionalAttrs (user.hostname == "desktop") {
-      extraPackages = [pkgs.amdvlk];
-
-      extraPackages32 = [pkgs.driversi686Linux.amdvlk];
-    }
     // lib.optionalAttrs (user.hostname == "notebook") {
       # TODO In NixOS Desktop, check if intel igpu is enabled, if not, these drivers are not needed there.
       extraPackages = [

@@ -12,7 +12,7 @@
     };
 
     # For all QT apps that need to show thumbnails
-    home.packages = with pkgs.libsForQt5; [
+    home.packages = with pkgs.kdePackages; [
       qtwayland
       kio-extras
       ffmpegthumbs

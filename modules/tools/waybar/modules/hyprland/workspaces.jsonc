@@ -13,7 +13,15 @@
       "windsurf": "󰨞 ",
       "spotify": " ",
       "brave": " ",
-      "class<Rofi>": ""
+      "class<obsidian>": "󱚌 ",
+      "class<protonvpn-app>": "󰖂 ",
+      "class<org.keepassxc.KeePassXC>": "󰌆 ",
+      "gimp": " ",
+      // Empty icons
+      "class<Rofi>": "",
+      "class<it.catboy.ripdrag>": "",
+      "class<imv>": "",
+      "class<mpv>": ""
     },
     "persistent-workspaces": {
       "HDMI-A-1": [

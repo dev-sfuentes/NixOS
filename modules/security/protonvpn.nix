@@ -34,7 +34,7 @@
       categories = ["X-Rofi"];
     };
 
-    hyprland.windowrulev2 = map (rule: rule + ", class:(.protonvpn-app-wrapped)") [
+    hyprland.windowrulev2 = map (rule: rule + ", class:(protonvpn-app)") [
       "float" # Makes sure to float the window and subwindows
       "size <55% <55%"
     ];

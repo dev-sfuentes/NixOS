@@ -20,19 +20,26 @@
     backupFileExtension = "backup";
   };
 
+  ## WIP To remove/move this packages
   user-manage.home.packages = [
     pkgs.gtk3-x11 # Tool to open .desktop files from terminal or commands using gtk-launch
     pkgs.imv # Image viewer
     pkgs.mpv # Video viewer
     pkgs.vlc # Media player
     pkgs.zathura # PDF viewer
-    pkgs.pavucontrol # Manage audio sources
     pkgs.libreoffice # Open Source microsoft 365 alternative
     unstable-pkgs.vdhcoapp # Companion application for the Video DownloadHelper browser add-on
 
-    # pkgs.efibootmgr
-    unstable-pkgs.signal-desktop
+    pkgs.obsidian
+    pkgs.spotify
+    pkgs.qbittorrent
+    pkgs.gimp
+    pkgs.vesktop
+    pkgs.pavucontrol
     unstable-pkgs.telegram-desktop
+    unstable-pkgs.signal-desktop
+
+    # pkgs.efibootmgr
 
     pkgs.hunspell # Spell checker
     pkgs.hunspellDicts.en_US # English spell checker
@@ -45,7 +52,7 @@
     # PavuControl. Audio manager
     pavucontrol = {
       name = "PavuControl";
-      exec = "${pkgs.pavucontrol}/bin/pavucontrol";
+      exec = "pavucontrol";
       icon = "pavucontrol";
       categories = ["X-Rofi"];
     };
@@ -53,7 +60,7 @@
     # Discord. Chat client
     vesktop = {
       name = "Discord";
-      exec = "${pkgs.vesktop}/bin/vesktop %U";
+      exec = "vesktop %U";
       icon = "discord";
       categories = ["X-Rofi"];
     };
@@ -61,8 +68,8 @@
     # Gimp
     gimp = {
       name = "Gimp";
-      exec = "${pkgs.gimp}/bin/gimp %U";
-      icon = "gimp";
+      exec = "gimp %U";
+      icon = "Gimp";
       mimeType = ["image/bmp" "image/g3fax" "image/gif" "image/x-fits" "image/x-pcx" "image/x-portable-anymap" "image/x-portable-bitmap" "image/x-portable-graymap" "image/x-portable-pixmap" "image/x-psd" "image/x-sgi" "image/x-tga" "image/x-xbitmap" "image/x-xwindowdump" "image/x-xcf" "image/x-compressed-xcf" "image/x-gimp-gbr" "image/x-gimp-pat" "image/x-gimp-gih" "image/x-sun-raster" "image/tiff" "image/jpeg" "image/x-psp" "application/postscript" "image/png" "image/x-icon" "image/x-xpixmap" "image/x-exr" "image/webp" "image/x-webp" "image/heif" "image/heic" "image/avif" "image/jxl" "image/svg+xml" "application/pdf" "image/x-wmf" "image/jp2" "image/x-xcursor"];
       categories = ["X-Rofi"];
     };
@@ -70,7 +77,7 @@
     # Obsidian. Knowledge database notes
     obsidian = {
       name = "Obsidian";
-      exec = "${pkgs.obsidian}/bin/obsidian %u";
+      exec = "obsidian %u";
       icon = "obsidian";
       mimeType = ["x-scheme-handler/obsidian"];
       categories = ["X-Rofi"];
@@ -80,7 +87,7 @@
     # Note: When `libcurl-gnutls.so.4: no version information...` appears, clear Spotify's cache with `rm -rf ~/.cache/spotify`
     spotify = {
       name = "Spotify";
-      exec = "env NIXOS_OZONE_WL=1 ${pkgs.spotify}/bin/spotify %U";
+      exec = "env NIXOS_OZONE_WL=1 spotify %U";
       icon = "spotify-client";
       mimeType = ["x-scheme-handler/spotify"];
       settings.StartupWMClass = "spotify";
@@ -90,9 +97,27 @@
     # QBitTorrent. Torrent client
     "org.qbittorrent.qBittorrent" = {
       name = "qBittorrent";
-      exec = "${pkgs.qbittorrent}/bin/qbittorrent %U";
+      exec = "qbittorrent %U";
       icon = "qbittorrent";
       mimeType = ["application/x-bittorrent" "x-scheme-handler/magnet"];
+      categories = ["X-Rofi"];
+    };
+
+    # Telegram. Messaging
+    # Note: For some reason, can't open from Rofi
+    telegram-desktop = {
+      name = "Telegram Desktop";
+      exec = "Telegram";
+      icon = "org.telegram.desktop";
+      categories = ["X-Rofi"];
+    };
+
+    # Signal. Messaging
+    # Note: Same as Telegram, can't open from Rofi
+    signal-desktop = {
+      name = "Signal Desktop";
+      exec = "signal-desktop";
+      icon = "signal-desktop";
       categories = ["X-Rofi"];
     };
   };
@@ -105,9 +130,10 @@
 
   # Hyprland specific settings
   user-manage.hyprland = {
-    exec-once = ["[workspace 11 silent] ${pkgs.spotify}/bin/spotify"];
+    exec-once = ["[workspace 9 silent] spotify"];
     windowrulev2 = [
       "opacity 0.95, class:(Spotify)"
+      "float, title:(Export Image as PNG)"
     ];
   };
 }

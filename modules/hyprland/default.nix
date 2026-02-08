@@ -18,8 +18,6 @@
       {
         cursor.hide_on_key_press = true; # Hide cursor when writing
 
-        gestures.workspace_swipe = "off";
-
         general = {
           resize_on_border = true;
         };

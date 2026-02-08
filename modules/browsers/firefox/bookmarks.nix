@@ -26,6 +26,11 @@
             keyword = "tmo";
             url = "https://zonatmo.com";
           }
+          {
+            name = "MangaDex";
+            keyword = "mdex";
+            url = "https://mangadex.org";
+          }
         ];
       }
       # MARK: Nix Sites
@@ -105,6 +110,10 @@
             name = "JKanime";
             keyword = "jka";
             url = "https://jkanime.net";
+          }
+          {
+            name = "StreamSports";
+            url = "https://streamsports99.su";
           }
         ];
       }

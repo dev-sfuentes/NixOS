@@ -14,7 +14,7 @@
 
     programs.vscode.profiles.default.extensions = with pkgs.nix-vscode-extensions.open-vsx;
       [
-        jnoortheen.nix-ide # Nix language support. Used with nixd
+        bbenoist.nix # Nix language support. Used with nixd
         kamadorueda.alejandra # Nix formatter
         ms-python.black-formatter # Python formatter
         esbenp.prettier-vscode # Web dev languages formatter (JS, TS, HTML, CSS, JSON)
@@ -23,7 +23,8 @@
         #heybourn.headwind # Sorting tailwind classes
         bungcip.better-toml # TOML syntax support
         formulahendry.auto-rename-tag # Autorename HTML tags
-        tailscale.vscode-tailscale # Needed to connect to server repository
+        #tailscale.vscode-tailscale # Needed to connect to server repository
+        openai.chatgpt # Codex
       ]
       # NOTE: dlasagno.wal-theme is installed manually because the wal.json file is incompatible with declarative configuration
       # Extensions obtained directly from marketplace. Used sha256=pkgs.lib.fakeSha256; to get the correct sha256

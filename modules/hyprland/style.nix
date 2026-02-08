@@ -15,7 +15,7 @@
 
     animations = {
       enabled = true;
-      first_launch_animation = true;
+      #first_launch_animation = true;
     };
 
     decoration = {

@@ -12,7 +12,8 @@
 
       /browsers/brave.nix # Brave browser
       /browsers/firefox # Firefox browser
-      /browsers/google-chrome.nix # Google Chrome browser
+      /browsers/google-chrome # Google Chrome browser
+      #/browsers/google-chrome/vpn.nix # Google Chrome VPN
       /browsers/mullvad.nix # Mullvad browser
 
       /hyprland # Window manager
@@ -50,11 +51,12 @@
       /terminal/nh.nix # Nix Helper
       /terminal/starship.nix # Shell prompt
 
-      /tools/olive-editor # Video editor
+      #/tools/olive-editor.nix # Video editor
       /tools/dupeguru # Duplicate file finder
       /tools/obs # Screen recorder
       /tools/packages.nix # TODO: Separate into different files
       /tools/rofi # App / Menu Launcher
+      /tools/tagstudio.nix # Tag Studio
       /tools/thunar # File manager
       /tools/waybar # Status bar
       /tools/windsurf # Code editor

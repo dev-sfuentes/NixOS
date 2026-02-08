@@ -111,8 +111,20 @@ in {
         "super alt, right, movefocus, r"
 
         # Screenshots
-        "super shift, s, exec, ${pkgs.grimblast}/bin/grimblast --freeze --notify copy area" # Copy only
-        ", print, exec, ${pkgs.grimblast}/bin/grimblast --freeze --notify copysave area" # Copy and save
+        "super shift, s, exec, ${pkgs.writeShellScript "grimblast-copy" ''
+          ${pkgs.grimblast}/bin/grimblast --freeze --notify copy area
+
+          # Workaround since Waybar crashes
+          pkill waybar
+          hyprctl dispatch exec waybar
+        ''}" # Copy only
+        ", print, exec, ${pkgs.writeShellScript "grimblast-copysave" ''
+          ${pkgs.grimblast}/bin/grimblast --freeze --notify copysave area
+
+          # Workaround since Waybar crashes
+          pkill waybar
+          hyprctl dispatch exec waybar
+        ''}" # Copy and save
 
         # Change wallpaper with super + up and down buttons
         "super, page_up, exec, ${on-wallpaper-change} up"

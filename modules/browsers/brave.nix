@@ -4,7 +4,7 @@
   user-manage.xdg.desktopEntries."brave" = {
     name = "Brave";
     exec = "brave %U";
-    icon = "brave";
+    icon = "brave-browser";
     categories = ["X-Rofi"];
   };
 }

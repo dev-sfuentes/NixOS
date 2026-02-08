@@ -255,7 +255,7 @@
         elif [ -e "$new_name" ]; then
           ${pkgs.libnotify}/bin/notify-send "Error:" "The file '$new_name' already exists. Choose a different name."
           lf -remote "send $id select $f"
-        
+      
         # Announce the new name
         else
           ${pkgs.libnotify}/bin/notify-send "Renamed '$(basename $f)' to '$new_name'."
@@ -374,6 +374,15 @@
       }}'';
     keybindings.Rmf = "descompress-file";
 
+    commands.get-first-frame-from-video = ''
+      %{{
+        name="''${f%.*}"                          # removes the last extension
+
+        ${pkgs.ffmpeg}/bin/ffmpeg -i "$f" -vframes 1 "''${name}.png"
+      }}
+    '';
+    keybindings.Rff = "get-first-frame-from-video";
+
     commands.rotate-media-left = ''
       %{{
         name="''${f%.*}"                          # removes the last extension
@@ -408,7 +417,7 @@
       }}'';
     keybindings."R<right>" = "rotate-media-right";
 
-    commands.drag-and-drop = ''%{{ ripdrag $fx }}'';
+    commands.drag-and-drop = ''%{{ ripdrag "$fx" }}'';
     keybindings.dd = "drag-and-drop";
 
     commands.drag-and-drop-all = ''%{{ ripdrag -A $fx }}'';

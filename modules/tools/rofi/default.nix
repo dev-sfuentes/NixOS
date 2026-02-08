@@ -8,8 +8,6 @@
     programs.rofi = {
       enable = true;
 
-      package = pkgs.rofi-wayland;
-
       terminal = "${pkgs.foot}/bin/foot";
 
       theme = lib.mkForce "${user.flake}/modules/tools/rofi/style.rasi";

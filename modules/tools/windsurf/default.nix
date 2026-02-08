@@ -10,7 +10,7 @@
       name = "Windsurf";
       genericName = "vscode";
       exec = "env NIXOS_OZONE_WL=1 windsurf %F";
-      icon = "code";
+      icon = "windsurf";
       categories = ["X-Rofi"];
       startupNotify = true;
       settings.StartupWMClass = "windsurf";

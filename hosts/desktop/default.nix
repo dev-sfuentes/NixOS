@@ -52,11 +52,12 @@
       /terminal/starship.nix # Shell prompt
 
       #/tools/olive-editor.nix # Video editor
+      /tools/mpv.nix # Video player
       /tools/dupeguru # Duplicate file finder
       /tools/obs # Screen recorder
       /tools/packages.nix # TODO: Separate into different files
       /tools/rofi # App / Menu Launcher
-      /tools/tagstudio.nix # Tag Studio
+      #/tools/tagstudio.nix # Tag Studio
       /tools/thunar # File manager
       /tools/waybar # Status bar
       /tools/windsurf # Code editor

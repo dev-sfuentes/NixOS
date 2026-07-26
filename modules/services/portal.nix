@@ -12,11 +12,13 @@
 
       extraPortals = with pkgs; [
         xdg-desktop-portal-hyprland
+        kdePackages.xdg-desktop-portal-kde
         xdg-desktop-portal-gtk
       ];
 
       config.hyprland.default = [
         "hyprland"
+        "kde"
         "gtk"
       ];
     };
@@ -29,15 +31,17 @@
       commonRules = [
         "float"
         "center 1"
-        "size <60% <50%"
+        "size >80% >70%"
+        "nomaxsize"
       ];
       # Apply common rules to all windows that match the following conditions
       applyRulesToConditions = conditions: builtins.concatLists (map (condition: map (rule: rule + ", " + condition) commonRules) conditions);
     in
       applyRulesToConditions [
-        "class:(.*dg-desktop-portal.*)"
         "title:(Save Video)"
         "title:(Save Image)"
+        "class:(org.freedesktop.impl.portal.desktop.kde)"
+        "class:(org.freedesktop.impl.portal.desktop.gtk)"
       ];
   };
 }

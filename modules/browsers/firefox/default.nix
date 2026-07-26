@@ -1,4 +1,6 @@
-{user, ...}: {
+{user, ...}: let
+  exec = "GTK_USE_PORTAL=1 firefox";
+in {
   user-manage = {
     programs.firefox = {
       enable = true; # Install firefox
@@ -11,7 +13,7 @@
     # Create an entry for Rofi
     xdg.desktopEntries.firefox = {
       name = "Firefox";
-      exec = "firefox --name firefox %U";
+      exec = "env ${exec} %U";
       icon = "firefox";
       categories = ["X-Rofi"];
       mimeType = ["text/html" "text/xml" "application/xhtml+xml" "application/vnd.mozilla.xul+xml" "x-scheme-handler/http" "x-scheme-handler/https"];
@@ -27,7 +29,7 @@
     };
 
     hyprland = {
-      exec-once = ["[workspace 2] firefox"];
+      exec-once = ["[workspace 2] ${exec}"];
       windowrulev2 = map (rule: rule + ", title:(Picture-in-Picture)") [
         "center 1"
         "float"

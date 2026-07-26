@@ -24,11 +24,10 @@
   user-manage.home.packages = [
     pkgs.gtk3-x11 # Tool to open .desktop files from terminal or commands using gtk-launch
     pkgs.imv # Image viewer
-    pkgs.mpv # Video viewer
     pkgs.vlc # Media player
     pkgs.zathura # PDF viewer
     pkgs.libreoffice # Open Source microsoft 365 alternative
-    unstable-pkgs.vdhcoapp # Companion application for the Video DownloadHelper browser add-on
+    #unstable-pkgs.vdhcoapp # Companion application for the Video DownloadHelper browser add-on
 
     pkgs.obsidian
     pkgs.spotify

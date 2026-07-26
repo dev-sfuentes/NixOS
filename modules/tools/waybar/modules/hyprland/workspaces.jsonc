@@ -17,6 +17,8 @@
       "class<protonvpn-app>": "󰖂 ",
       "class<org.keepassxc.KeePassXC>": "󰌆 ",
       "gimp": " ",
+      "org.telegram.desktop": " ",
+      "signal": "󰒢 ",
       // Empty icons
       "class<Rofi>": "",
       "class<it.catboy.ripdrag>": "",

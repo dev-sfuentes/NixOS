@@ -19,31 +19,35 @@
     users.root.hashedPassword = "!"; # Disable root user
   };
 
-  boot = {
-    loader = {
-      grub =
-        {
-          enable = true;
-          devices = ["nodev"];
-          efiSupport = true;
-        }
-        // lib.optionalAttrs (user.hostname == "desktop") {
-          useOSProber = true; # Append entries for other OSs detected by os-prober
-        };
-
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot";
+  boot.loader = {
+    grub =
+      {
+        enable = true;
+        devices = ["nodev"];
+        efiSupport = true;
+      }
+      // lib.optionalAttrs (user.hostname == "desktop") {
+        useOSProber = true; # Append entries for other OSs detected by os-prober
+        extraEntries = ''
+          menuentry "UEFI Firmware Settings" {
+            fwsetup
+          }
+        '';
       };
 
-      timeout =
-        if user.hostname == "desktop"
-        then 60 # Timeout for desktop is longer because of dual boot
-        else 5;
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
     };
 
-    tmp.cleanOnBoot = true;
+    timeout =
+      if user.hostname == "desktop"
+      then 60 # Timeout for desktop is longer because of dual boot
+      else 5;
   };
+
+  # Clean /tmp folder always
+  boot.tmp.cleanOnBoot = true;
 
   # Select internationalisation properties.
   i18n = {

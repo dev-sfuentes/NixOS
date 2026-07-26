@@ -19,10 +19,12 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    /*
     tagstudio = {
       url = "github:TagStudioDev/TagStudio";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    */
 
     comfyui-nix = {
       url = "github:utensils/comfyui-nix";

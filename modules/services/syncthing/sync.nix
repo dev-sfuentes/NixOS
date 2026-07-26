@@ -12,11 +12,6 @@
         devices = ["mobile"];
       };
 
-      "Notes" = {
-        path = "${config.services.syncthing.dataDir}/Notes";
-        devices = ["mobile"];
-      };
-
       "Wallpapers" = {
         path = "${user.wallpapers}/Mobile";
         type = "sendonly";

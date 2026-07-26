@@ -8,13 +8,11 @@
     home.packages = [pkgs.keepassxc];
 
     xdg.configFile."keepassxc/keepassxc.ini" = {
-      force = true;
+      force = false;
 
       text = ''
         [General]
-        BackupBeforeSave=true
         UseGroupIconOnEntryCreation=false
-        BackupFilePathPattern=${user.sync}/Keepass/{DB_FILENAME}.old.kdbx
         FaviconDownloadTimeout=15
         NumberOfRememberedLastDatabases=1
         RememberLastKeyFiles=false
@@ -24,9 +22,6 @@
         CustomProxyLocation=
         Enabled=true
 
-        [FdoSecrets]
-        Enabled=false
-
         [GUI]
         ApplicationTheme=dark
         ColorPasswords=true
@@ -34,16 +29,17 @@
         HideMenubar=true
         HidePreviewPanel=true
         HideToolbar=false
+        MinimizeOnClose=true
+        MinimizeOnStartup=true
+        MinimizeToTray=true
         HideUsernames=false
-        TrayIconAppearance=monochrome-light
+        ShowTrayIcon=true
+        TrayIconAppearance=colorful
 
         [PasswordGenerator]
         AdditionalChars=
         ExcludedChars=
         Length=20
-
-        [SSHAgent]
-        Enabled=true
 
         [Security]
         ClearClipboardTimeout=60
@@ -57,8 +53,8 @@
         LockDatabaseIdleSeconds=600
         LockDatabaseMinimize=true
         NoConfirmMoveEntryToRecycleBin=false
-        Security_HideNotes=true
         PasswordEmptyPlaceholder=true
+        Security_HideNotes=true
       '';
     };
 
@@ -74,6 +70,8 @@
         X-GNOME-SingleWindow = "true";
       };
     };
+
+    hyprland.exec-once = ["keepassxc"]; # It opens on startup, but in config it hides in tray.
 
     hyprland.windowrulev2 = [
       "pin, title:(Unlock Database - KeePassXC)"

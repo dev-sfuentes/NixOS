@@ -8,28 +8,23 @@
         name = "Favorites";
         bookmarks = [
           {
-            name = "Youtube";
             url = "https://www.youtube.com";
+            name = "Youtube";
           }
           {
+            url = "https://www.reddit.com";
             name = "Reddit";
             keyword = "redd";
-            url = "https://www.reddit.com";
           }
           {
+            url = "https://natomanga.com";
             name = "Natomanga";
             keyword = "manga";
-            url = "https://natomanga.com";
           }
           {
-            name = "ZonaTMO";
-            keyword = "tmo";
-            url = "https://zonatmo.com";
-          }
-          {
+            url = "https://mangadex.org";
             name = "MangaDex";
             keyword = "mdex";
-            url = "https://mangadex.org";
           }
         ];
       }
@@ -38,43 +33,43 @@
         name = "Nix sites";
         bookmarks = [
           {
+            url = "https://nixos.org";
             name = "Homepage";
             keyword = "nixorg";
-            url = "https://nixos.org";
           }
           {
+            url = "https://wiki.nixos.org";
             name = "Wiki";
             keyword = "nwiki";
-            url = "https://wiki.nixos.org";
           }
           {
+            url = "https://search.nixos.org/packages";
             name = "Nix packages";
             keyword = "np";
-            url = "https://search.nixos.org/packages";
           }
           {
+            url = "https://github.com/NixOS/nixpkgs";
             name = "Github Repository";
             keyword = "nrepo";
-            url = "https://github.com/NixOS/nixpkgs";
           }
           {
+            url = "https://www.nixhub.io";
             name = "Nix hub";
             keyword = "nhub";
-            url = "https://www.nixhub.io";
           }
           {
+            url = "https://nur.nix-community.org";
             name = "NUR";
             keyword = "nur";
-            url = "https://nur.nix-community.org";
           }
           {
+            url = "https://mynixos.com";
             name = "MyNixOS";
             keyword = "myn";
-            url = "https://mynixos.com";
           }
           {
-            name = "Nix documentation";
             url = "https://nlewo.github.io/nixos-manual-sphinx/index.html";
+            name = "Nix documentation";
           }
         ];
       }
@@ -83,37 +78,41 @@
         name = "Entertainment";
         bookmarks = [
           {
+            url = "https://www.youtube.com";
             name = "Youtube";
             keyword = "yt";
-            url = "https://www.youtube.com";
           }
           {
+            url = "https://www.twitch.tv";
             name = "Twitch";
             keyword = "twi";
-            url = "https://www.twitch.tv";
           }
           {
-            name = "Netflix";
             url = "https://www.netflix.com";
+            name = "Netflix";
           }
           {
+            url = "https://natomanga.com";
             name = "Natomanga";
             keyword = "manga";
-            url = "https://natomanga.com";
           }
           {
+            url = "https://zonatmo.com";
             name = "ZonaTMO";
             keyword = "tmo";
-            url = "https://zonatmo.com";
           }
           {
+            url = "https://jkanime.net";
             name = "JKanime";
             keyword = "jka";
-            url = "https://jkanime.net";
           }
           {
-            name = "StreamSports";
             url = "https://streamsports99.su";
+            name = "StreamSports";
+          }
+          {
+            url = "https://ntv.cx";
+            name = "NTV";
           }
         ];
       }
@@ -122,37 +121,37 @@
         name = "Social Media";
         bookmarks = [
           {
+            url = "https://web.whatsapp.com";
             name = "Whatsapp Web";
             keyword = "wsp";
-            url = "https://web.whatsapp.com";
           }
           {
+            url = "https://www.instagram.com";
             name = "Instagram";
             keyword = "insta";
-            url = "https://www.instagram.com";
           }
           {
+            url = "https://www.reddit.com";
             name = "Reddit";
             keyword = "redd";
-            url = "https://www.reddit.com";
           }
           {
+            url = "https://www.facebook.com";
             name = "Facebook";
             keyword = "face";
-            url = "https://www.facebook.com";
           }
           {
-            name = "LinkedIn";
             url = "https://www.linkedin.com";
+            name = "LinkedIn";
           }
           {
-            name = "TikTok";
             url = "https://www.tiktok.com/explore";
+            name = "TikTok";
           }
           {
+            url = "https://x.com";
             name = "X";
             keyword = "x";
-            url = "https://x.com";
           }
         ];
       }
@@ -161,18 +160,18 @@
         name = "Project Management";
         bookmarks = [
           {
-            name = "Atlassian";
             url = "https://www.atlassian.com";
+            name = "Atlassian";
           }
           {
+            url = "https://gitlab.com";
             name = "Gitlab";
             keyword = "glab";
-            url = "https://gitlab.com";
           }
           {
+            url = "https://github.com";
             name = "Github";
             keyword = "ghub";
-            url = "https://github.com";
           }
         ];
       }
@@ -181,54 +180,58 @@
         name = "Tools";
         bookmarks = [
           {
+            url = "https://languagetool.org";
             name = "LanguageTool";
             keyword = "lt";
-            url = "https://languagetool.org";
           }
           {
+            url = "https://chatgpt.com";
             name = "ChatGPT";
             keyword = "gpt";
-            url = "https://chatgpt.com";
           }
           {
-            name = "MockAPI";
             url = "https://mockapi.io";
+            name = "MockAPI";
           }
           {
-            name = "Image Resizer";
             url = "https://imageresizer.com";
+            name = "Image Resizer";
           }
           {
-            name = "Background Remover";
             url = "https://www.remove.bg";
+            name = "Background Remover";
           }
           {
-            name = "Watermark Remover";
             url = "https://www.watermarkremover.io";
+            name = "Watermark Remover";
           }
           {
-            name = "Files Converter";
             url = "https://anyconv.com";
+            name = "Files Converter";
           }
           {
-            name = "Draw.io";
             url = "https://app.diagrams.net";
+            name = "Draw.io";
           }
           {
-            name = "Wappalyzer";
             url = "https://www.wappalyzer.com";
+            name = "Wappalyzer";
           }
           {
-            name = "DevEnv";
             url = "https://devenv.sh";
+            name = "DevEnv";
           }
           {
-            name = "DirEnv";
             url = "https://direnv.net";
+            name = "DirEnv";
           }
           {
-            name = "PCPartPicker";
             url = "https://pcpartpicker.com";
+            name = "PCPartPicker";
+          }
+          {
+            url = "https://fmhy.net";
+            name = "FMHY";
           }
         ];
       }
@@ -238,23 +241,23 @@
         bookmarks = [
           {
             # To compare times zones
-            name = "World Time Buddy";
             url = "https://www.worldtimebuddy.com";
+            name = "World Time Buddy";
           }
           {
             # To check and possible find dev jobs
-            name = "Devjobs Scanner";
             url = "https://www.devjobsscanner.com";
+            name = "Devjobs Scanner";
           }
           {
             # Compare electronics prices
-            name = "SoloTodo";
             url = "https://www.solotodo.cl";
+            name = "SoloTodo";
           }
           {
             # Cloud storage
-            name = "Proton Drive";
             url = "https://drive.proton.me";
+            name = "Proton Drive";
           }
         ];
       }
@@ -264,18 +267,18 @@
         bookmarks = [
           {
             # Submarine Cable map
-            name = "Submarine Cable Map";
             url = "https://www.submarinecablemap.com";
+            name = "Submarine Cable Map";
           }
           {
             # To check if certain mail have been pwned
-            name = "haveibeenpwned";
             url = "https://haveibeenpwned.com";
+            name = "haveibeenpwned";
           }
           {
             # PlanetScale Blogs
-            name = "PlanetScale Blogs";
             url = "https://planetscale.com/blog";
+            name = "PlanetScale Blogs";
           }
         ];
       }
@@ -284,8 +287,8 @@
         name = "Apps";
         bookmarks = [
           {
-            name = "Hyprland";
             url = "https://hyprland.org";
+            name = "Hyprland";
           }
         ];
       }
@@ -294,14 +297,14 @@
         name = "Services";
         bookmarks = [
           {
-            name = "Syncthing";
-            keyword = "sync";
             url = "http://localhost:8384";
+            keyword = "sync";
+            name = "Syncthing";
           }
           {
-            name = "Jellyfin";
-            keyword = "jelly";
             url = "http://localhost:8096";
+            keyword = "jelly";
+            name = "Jellyfin";
           }
         ];
       }
@@ -310,16 +313,16 @@
         name = "E-Commerce";
         bookmarks = [
           {
-            name = "AliExpress";
             url = "https://aliexpress.com";
+            name = "AliExpress";
           }
           {
-            name = "Temu";
             url = "https://www.temu.com";
+            name = "Temu";
           }
           {
-            name = "MercadoLibre";
             url = "https://www.mercadolibre.cl";
+            name = "MercadoLibre";
           }
         ];
       }
@@ -328,16 +331,16 @@
         name = "Wallpapers";
         bookmarks = [
           {
-            name = "4K Wallpapers";
             url = "https://4kwallpapers.com";
+            name = "4K Wallpapers";
           }
           {
-            name = "Artstation";
             url = "https://www.artstation.com";
+            name = "Artstation";
           }
           {
-            name = "Wallhaven";
             url = "https://wallhaven.cc";
+            name = "Wallhaven";
           }
         ];
       }
@@ -346,29 +349,29 @@
         name = "Icons";
         bookmarks = [
           {
-            name = "Tabler Icons";
             url = "https://tabler.io/icons";
+            name = "Tabler Icons";
           }
           {
-            name = "Flaticon";
             url = "https://www.flaticon.com";
+            name = "Flaticon";
           }
           {
-            name = "Heroicons";
             url = "https://heroicons.com";
+            name = "Heroicons";
           }
           {
-            name = "Icons8";
             url = "https://icons8.com";
+            name = "Icons8";
           }
           # Glyphs
           {
-            name = "Nerd Fonts";
             url = "https://www.nerdfonts.com/cheat-sheet";
+            name = "Nerd Fonts";
           }
           {
-            name = "FontAwesome";
             url = "https://fontawesome.com";
+            name = "FontAwesome";
           }
         ];
       }
@@ -377,8 +380,8 @@
         name = "Games Related";
         bookmarks = [
           {
-            name = "Steam";
             url = "https://store.steampowered.com";
+            name = "Steam";
           }
         ];
       }
@@ -387,16 +390,16 @@
         name = "Country Wide";
         bookmarks = [
           {
-            name = "AyudaMineduc";
             url = "https://ayudamineduc.cl";
+            name = "AyudaMineduc";
           }
           {
-            name = "Banco de Chile";
             url = "https://bancochile.cl";
+            name = "Banco de Chile";
           }
           {
-            name = "Banco Estado";
             url = "https://www.bancoestado.cl";
+            name = "Banco Estado";
           }
         ];
       }
@@ -405,9 +408,9 @@
         name = "Linux sites";
         bookmarks = [
           {
-            name = "kernel.org";
-            keyword = "kernel";
             url = "https://www.kernel.org";
+            keyword = "kernel";
+            name = "kernel.org";
           }
         ];
       }
@@ -416,9 +419,9 @@
         name = "Firefox sites";
         bookmarks = [
           {
-            name = "Firefox Configuration";
-            keyword = "config";
             url = "about:config";
+            keyword = "config";
+            name = "Firefox Configuration";
           }
         ];
       }
@@ -427,29 +430,29 @@
         name = "Google Sites";
         bookmarks = [
           {
-            name = "Google Translate";
-            keyword = "trad";
             url = "https://translate.google.com";
+            keyword = "trad";
+            name = "Google Translate";
           }
           {
-            name = "Google Maps";
-            keyword = "gmaps";
             url = "https://maps.google.com";
+            keyword = "gmaps";
+            name = "Google Maps";
           }
           {
             # Cloud storage
-            name = "Google Drive";
             url = "https://drive.google.com";
+            name = "Google Drive";
           }
           {
             # Cloud Database
-            name = "Google Firebase";
             url = "https://firebase.google.com";
+            name = "Google Firebase";
           }
           {
             # Web Fonts
-            name = "Google Fonts";
             url = "https://fonts.google.com";
+            name = "Google Fonts";
           }
         ];
       }
@@ -458,24 +461,24 @@
         name = "Arr Suite";
         bookmarks = [
           {
-            name = "Prowlarr";
             url = "http://localhost:9696";
+            name = "Prowlarr";
           }
           {
-            name = "Radarr";
             url = "http://localhost:7878";
+            name = "Radarr";
           }
           {
-            name = "Sonarr";
             url = "http://localhost:8989";
+            name = "Sonarr";
           }
           {
-            name = "Lidarr";
             url = "http://localhost:8686";
+            name = "Lidarr";
           }
           {
-            name = "Bazarr";
             url = "http://localhost:6767";
+            name = "Bazarr";
           }
         ];
       }

@@ -32,7 +32,7 @@
     keybindings."<a-right>" = "open-multiple";
 
     # Open VLC
-    commands.vlc-open = "&${pkgs.vlc}/bin/vlc $fx";
+    commands.vlc-open = ''&${pkgs.vlc}/bin/vlc "$fx"'';
     keybindings.ov = "vlc-open";
 
     # Open Thunar
@@ -382,6 +382,15 @@
       }}
     '';
     keybindings.Rff = "get-first-frame-from-video";
+
+    commands.get-last-frame-from-video = ''
+      %{{
+        name="''${f%.*}"                          # removes the last extension
+
+        ${pkgs.ffmpeg}/bin/ffmpeg -sseof -1 -i "$f" -frames:v 1 "''${name}_last.png"
+      }}
+    '';
+    keybindings.Rlf = "get-last-frame-from-video";
 
     commands.rotate-media-left = ''
       %{{
